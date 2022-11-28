@@ -1,0 +1,10 @@
+# create a keyspace
+
+try:
+    query = "create keyspace employee_management with replication = {'class':'SimpleStrategy','replication_factor':3}"
+    session.execute(query)
+    
+
+    print('sucessfull')
+except Exception as err:
+    print('Exception occured:', err)
